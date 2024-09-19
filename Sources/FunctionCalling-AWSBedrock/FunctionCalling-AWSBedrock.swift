@@ -4,15 +4,21 @@
 import FunctionCalling
 import AWSBedrockRuntime
 import Foundation
-import struct Smithy.Document
+
+let decoder: JSONDecoder = {
+    let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+    return decoder
+}()
 
 extension ToolContainer {
     typealias FunctionCallingTool = FunctionCalling.Tool
-
+    
     public var bedrockAllTools: [BedrockRuntimeClientTypes.Tool] {
         get throws {
-            let data = allTools.data(using: .utf8)!
-            let functionCallingTools = try JSONDecoder().decode([FunctionCallingTool].self, from: data)
+            let data = allTools.replacingOccurrences(of: "\n", with: "").data(using: .utf8)!
+            let functionCallingTools = try decoder.decode([FunctionCallingTool].self, from: data)
             return try functionCallingTools.map { try $0.toBedrockTool }
         }
     }
@@ -23,28 +29,5 @@ extension FunctionCalling.Tool {
         get throws {
             .toolspec(try .init(from: self))
         }
-    }
-}
-
-extension BedrockRuntimeClientTypes.ToolSpecification {
-    init(from tool: FunctionCalling.Tool) throws {
-        self.init(
-            description: tool.description,
-            inputSchema: try .init(from: tool.inputSchema),
-            name: tool.name
-        )
-    }
-}
-
-extension BedrockRuntimeClientTypes.ToolInputSchema {
-    init(from schema: FunctionCalling.InputSchema) throws {
-        self = .json(try .init(from: schema))
-    }
-}
-
-extension Smithy.Document {
-    init(from schema: FunctionCalling.InputSchema) throws {
-        let data = try JSONEncoder().encode(schema)
-        self = try Self.make(from: data)
     }
 }
