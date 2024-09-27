@@ -42,7 +42,7 @@ let package = Package(
         .target(
             "YouAppModule",
             dependencies: [
-                .product(name: "FunctionCalling_AWSBedrock", package: "FunctionCalling_AWSBedrock")
+                .product(name: "FunctionCalling-AWSBedrock", package: "FunctionCalling-AWSBedrock")
             ]
         )
     ],
