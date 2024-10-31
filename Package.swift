@@ -16,7 +16,7 @@ let package = Package(
             targets: ["FunctionCalling-AWSBedrock"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/FunctionCalling/FunctionCalling", from: "0.4.0"),
+        .package(url: "https://github.com/FunctionCalling/FunctionCalling", from: "0.5.0"),
         .package(url: "https://github.com/awslabs/aws-sdk-swift", from: "1.0.31"),
     ],
     targets: [
