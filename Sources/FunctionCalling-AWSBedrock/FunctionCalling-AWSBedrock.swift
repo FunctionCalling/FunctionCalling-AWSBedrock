@@ -7,7 +7,7 @@ import Foundation
 
 extension ToolContainer {
     typealias FunctionCallingTool = FunctionCalling.Tool
-    
+
     public var bedrockAllTools: [BedrockRuntimeClientTypes.Tool] {
         get throws {
             guard let functionCallingTools = allTools else {
