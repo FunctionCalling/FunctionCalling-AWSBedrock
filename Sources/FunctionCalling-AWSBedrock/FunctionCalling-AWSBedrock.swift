@@ -14,7 +14,7 @@ let decoder: JSONDecoder = {
 
 extension ToolContainer {
     typealias FunctionCallingTool = FunctionCalling.Tool
-    
+
     public var bedrockAllTools: [BedrockRuntimeClientTypes.Tool] {
         get throws {
             let data = allTools.replacingOccurrences(of: "\n", with: "").data(using: .utf8)!
