@@ -18,7 +18,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/FunctionCalling/FunctionCalling", from: "0.5.0"),
-        .package(url: "https://github.com/awslabs/aws-sdk-swift", from: "1.0.77")
+        .package(url: "https://github.com/awslabs/aws-sdk-swift", from: "1.0.78")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
