@@ -14,6 +14,8 @@ extension BedrockRuntimeClientTypes.Tool {
             return specification
         case .sdkUnknown:
             return nil
+        case .cachepoint(_):
+            return nil
         }
     }
 }
