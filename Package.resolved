@@ -1,13 +1,13 @@
 {
-  "originHash" : "1747c8e646fc737180f44bc12c649568efdb3c331f8f9deaf8d6507da748fe35",
+  "originHash" : "10c8886687ecb5296ef8c7a26781acefd3fbeac625ac63a897b321a3eab5783a",
   "pins" : [
     {
       "identity" : "aws-crt-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/awslabs/aws-crt-swift",
       "state" : {
-        "revision" : "7b42e0343f28b3451aab20840dc670abd12790bd",
-        "version" : "0.36.0"
+        "revision" : "74d970dde8a0d6b2fe1d8374767ca9793088ce2c",
+        "version" : "0.48.0"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/awslabs/aws-sdk-swift",
       "state" : {
-        "revision" : "a41d3b3e01b9803a4a2e0c2273c2de4b3fd787a4",
-        "version" : "0.77.1"
+        "revision" : "08679c731c3e28ef5f96e2b8c2d329036e9dd3c0",
+        "version" : "1.2.55"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FunctionCalling/FunctionCalling",
       "state" : {
-        "revision" : "24c07c25d57a66b0e34af8d1ffb1192c2b1313a3",
-        "version" : "0.4.0"
+        "revision" : "cd9c2c3d70e10c63e3da670718685825727b52ce",
+        "version" : "0.5.0"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/groue/GRMustache.swift",
       "state" : {
-        "revision" : "c4ee40ef49ae523b06fa470b8d27185ec027330d",
-        "version" : "5.0.1"
+        "revision" : "811326995377af216b970ae3afb0645ca94986c8",
+        "version" : "6.0.0"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/smithy-lang/smithy-swift",
       "state" : {
-        "revision" : "0ed3440f8c41e27a0937364d5035d2d4fefb8aa3",
-        "version" : "0.71.0"
+        "revision" : "755367ae4e10004f8b5a94fbfdf3f638a1f225bc",
+        "version" : "0.125.0"
       }
     },
     {
