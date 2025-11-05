@@ -16,6 +16,8 @@ extension BedrockRuntimeClientTypes.Tool {
             return nil
         case .cachepoint(_):
             return nil
+        case .systemtool(_):
+            return nil
         }
     }
 }
